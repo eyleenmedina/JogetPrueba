@@ -1,0 +1,235 @@
+{
+    "categories": [
+        {
+            "className": "org.joget.apps.userview.model.UserviewCategory",
+            "menus": [{
+                "className": "org.joget.apps.userview.lib.DataListMenu",
+                "properties": {
+                    "buttonPosition": "bottomLeft",
+                    "checkboxPosition": "left",
+                    "customFooter": "",
+                    "customHeader": "",
+                    "customId": "listado_leads",
+                    "datalistId": "list_plan",
+                    "id": "73A64EBB1F7B4F07B3A8D7EDC1DDBB67",
+                    "keyName": "",
+                    "label": "Listado de leads",
+                    "rowCount": "true",
+                    "selectionType": "multiple",
+                    "userviewCacheDuration": "20",
+                    "userviewCacheScope": ""
+                }
+            }],
+            "properties": {
+                "comment": "",
+                "hide": "",
+                "id": "category-CA41B226611F4EE18F864D44821505DC",
+                "label": "<i class='fa fa-home'><\/i> Home",
+                "permission": {
+                    "className": "org.joget.apps.userview.lib.DepartmentPermission",
+                    "properties": {
+                        "allowedDeptIds": "contact_center;riesgos",
+                        "orgId": "myinvestor"
+                    }
+                }
+            }
+        },
+        {
+            "className": "org.joget.apps.userview.model.UserviewCategory",
+            "menus": [{
+                "className": "org.joget.apps.userview.lib.DataListMenu",
+                "properties": {
+                    "buttonPosition": "bottomLeft",
+                    "checkboxPosition": "left",
+                    "customFooter": "",
+                    "customHeader": "",
+                    "customId": "listado_leads",
+                    "datalistId": "list_plan_data",
+                    "id": "273195DCBFBF48628D7C3C494ACFD2D4",
+                    "keyName": "",
+                    "label": "Listado de leads",
+                    "rowCount": "true",
+                    "selectionType": "multiple",
+                    "userviewCacheDuration": "20",
+                    "userviewCacheScope": ""
+                }
+            }],
+            "properties": {
+                "comment": "",
+                "hide": "",
+                "id": "category-EE74E4F4426241BD9BC3BC73B1D24AC7",
+                "label": "<i class='fa fa-home'><\/i> Home",
+                "permission": {
+                    "className": "org.joget.apps.userview.lib.DepartmentPermission",
+                    "properties": {
+                        "allowedDeptIds": "datos",
+                        "orgId": "myinvestor"
+                    }
+                }
+            }
+        },
+        {
+            "className": "org.joget.apps.userview.model.UserviewCategory",
+            "menus": [{
+                "className": "org.joget.apps.userview.lib.FormMenu",
+                "properties": {
+                    "cancelButtonLabel": "",
+                    "customFooter": "",
+                    "customHeader": "",
+                    "customId": "formulario",
+                    "fieldPassover": "",
+                    "fieldPassoverMethod": "append",
+                    "formId": "form_plan",
+                    "id": "194157C253844A7894EED464AA38E94C",
+                    "keyName": "",
+                    "label": "Form",
+                    "loadDataWithKey": "",
+                    "messageShowAfterComplete": "",
+                    "paramName": "",
+                    "readonly": "",
+                    "readonlyLabel": "",
+                    "redirectTargetOnCancel": "top",
+                    "redirectUrlAfterComplete": "listado_leads",
+                    "redirectUrlOnCancel": "listado_leads",
+                    "showInPopupDialog": "",
+                    "submitButtonLabel": "",
+                    "userviewCacheDuration": "20",
+                    "userviewCacheScope": ""
+                }
+            }],
+            "properties": {
+                "comment": "",
+                "hide": "yes",
+                "id": "category-1C8DCAC9A7AC4F36ACE75322B246AD35",
+                "label": "New Category",
+                "permission": {
+                    "className": "org.joget.apps.userview.lib.DepartmentPermission",
+                    "properties": {
+                        "allowedDeptIds": "contact_center;datos;riesgos",
+                        "orgId": "myinvestor"
+                    }
+                }
+            }
+        },
+        {
+            "className": "org.joget.apps.userview.model.UserviewCategory",
+            "menus": [{
+                "className": "org.joget.apps.userview.lib.RunProcess",
+                "properties": {
+                    "customId": "nuevo_lead",
+                    "fieldPassover": "",
+                    "fieldPassoverMethod": "append",
+                    "id": "37F0AEDDB19A475DAAE91D4C3E31C8EF",
+                    "keyName": "",
+                    "label": "Nuevo lead",
+                    "messageShowAfterComplete": "",
+                    "paramName": "",
+                    "processDefId": "proceso_plan",
+                    "redirectUrlAfterComplete": "listado_leads",
+                    "runProcessDirectly": "Yes",
+                    "runProcessSubmitLabel": "",
+                    "showInPopupDialog": "",
+                    "userviewCacheDuration": "20",
+                    "userviewCacheScope": ""
+                }
+            }],
+            "properties": {
+                "comment": "",
+                "hide": "",
+                "id": "category-BC47F35F1C5B45E89F26CBE64DDF9633",
+                "label": "New Category",
+                "permission": {
+                    "className": "org.joget.apps.userview.lib.DepartmentPermission",
+                    "properties": {
+                        "allowedDeptIds": "contact_center",
+                        "orgId": "myinvestor"
+                    }
+                }
+            }
+        },
+        {
+            "className": "org.joget.apps.userview.model.UserviewCategory",
+            "menus": [{
+                "className": "org.joget.apps.userview.lib.InboxMenu",
+                "properties": {
+                    "appFilter": "process",
+                    "assignment-customFooter": "",
+                    "assignment-customHeader": "",
+                    "buttonPosition": "bottomLeft",
+                    "customId": "accion",
+                    "id": "0AE154FF6E214665AD70C4FEAAA070E4",
+                    "label": "Acciones pendientes",
+                    "list-customFooter": "",
+                    "list-customHeader": "",
+                    "processId": "proceso_plan",
+                    "rowCount": "true",
+                    "userviewCacheDuration": "20",
+                    "userviewCacheScope": "user"
+                }
+            }],
+            "properties": {
+                "comment": "",
+                "hide": "yes",
+                "id": "category-8575D5D5D3B74741971CC63B3784ADD1",
+                "label": "New Category",
+                "permission": {
+                    "className": "org.joget.apps.userview.lib.DepartmentPermission",
+                    "properties": {
+                        "allowedDeptIds": "contact_center;datos;riesgos",
+                        "orgId": "myinvestor"
+                    }
+                }
+            }
+        }
+    ],
+    "className": "org.joget.apps.userview.model.Userview",
+    "properties": {
+        "description": "",
+        "footerMessage": "Powered by Data Brothers",
+        "id": "userview_planes",
+        "logoutText": "Logout",
+        "name": "Planes de Pensiones",
+        "welcomeMessage": "#date.EEE, d MMM yyyy#"
+    },
+    "setting": {"properties": {
+        "hideThisUserviewInAppCenter": "",
+        "permission": {
+            "className": "",
+            "properties": {}
+        },
+        "tempDisablePermissionChecking": "",
+        "theme": {
+            "className": "org.joget.plugin.enterprise.UniversalTheme",
+            "properties": {
+                "accentColor": "BLUE",
+                "buttonColor": "BLUE_GREY",
+                "buttonTextColor": "WHITE",
+                "css": "",
+                "disableHelpGuide": "true",
+                "enableResponsiveSwitch": "true",
+                "fav_icon": "",
+                "fontColor": "BLUE_GREY",
+                "homeAttractBanner": "",
+                "horizontal_menu": "horizontal_inline",
+                "inbox": "",
+                "js": "",
+                "loginPageBottom": "",
+                "loginPageTop": "",
+                "logo": "",
+                "menuFontColor": "BLACK",
+                "primaryColor": "WHITE",
+                "profile": "",
+                "removeAssignmentTitle": "true",
+                "shortcut": [],
+                "shortcutLinkLabel": "Shortcut",
+                "subfooter": "",
+                "subheader": "",
+                "themeScheme": "light",
+                "userImage": "no",
+                "userMenu": []
+            }
+        },
+        "userviewDescription": "",
+        "userview_thumbnail": "#appResource.logo_planes.jpg#"
+    }}
+}

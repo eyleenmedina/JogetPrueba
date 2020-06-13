@@ -1,0 +1,32 @@
+<appDefinition>
+   <id>camp_plan</id>
+   <version></version>
+   <name>Campaña Planes de Pensiones</name>
+   <packageDefinitionList/>
+   <formDefinitionList/>
+   <userviewDefinitionList/>
+   <datalistDefinitionList/>
+   <builderDefinitionList/>
+   <pluginDefaultPropertiesList>
+      <pluginDefaultProperties>
+         <id>org.joget.apps.app.lib.ProcessDataCollectorAuditTrail</id>
+         <appId>camp_plan</appId>
+         <appVersion>1</appVersion>
+         <pluginName>Process Data Collector</pluginName>
+         <pluginDescription>Save process data into app_report_* tables for reporting purposes</pluginDescription>
+         <pluginProperties>{}</pluginProperties>
+      </pluginDefaultProperties>
+      <pluginDefaultProperties>
+         <id>org.joget.apps.app.lib.UserNotificationAuditTrail</id>
+         <appId>camp_plan</appId>
+         <appVersion>1</appVersion>
+         <pluginName>User Notification</pluginName>
+         <pluginDescription></pluginDescription>
+         <pluginProperties>{&quot;cc&quot;:&quot;&quot;,&quot;subject&quot;:&quot;Nueva tarea Campaña Planes: #assignment.activityName#&quot;,&quot;emailMessage&quot;:&quot;A new task has been created by the process #assignment.processName#&quot;,&quot;isHtml&quot;:&quot;true&quot;,&quot;url&quot;:&quot;&quot;,&quot;urlName&quot;:&quot;&quot;,&quot;parameterName&quot;:&quot;activityId&quot;,&quot;passoverMethod&quot;:&quot;param&quot;,&quot;base&quot;:&quot;https:\/\/myinvestor-data.andinv.inet:8443\/jw\/&quot;,&quot;from&quot;:&quot;&quot;,&quot;host&quot;:&quot;&quot;,&quot;port&quot;:&quot;&quot;,&quot;security&quot;:&quot;&quot;,&quot;username&quot;:&quot;&quot;,&quot;password&quot;:&quot;&quot;,&quot;exclusion&quot;:&quot;proceso_plan-recepcion_info;proceso_plan-info_adicional;proceso_plan-alta_en_fie;proceso_plan-pendiente_gestion_inicial;proceso_plan-verificar_traspaso&quot;}</pluginProperties>
+      </pluginDefaultProperties>
+   </pluginDefaultPropertiesList>
+   <environmentVariableList/>
+   <messageList/>
+   <resourceList/>
+   <license>9JSpWngB9wseTDv+HOcPcXbVEzycPFw991xQTKOPPfd3RSddWToQPsMhJ6KZsSC4</license>
+</appDefinition>

@@ -1,0 +1,1335 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Package xmlns="http://www.wfmc.org/2002/XPDL1.0" xmlns:xpdl="http://www.wfmc.org/2002/XPDL1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Id="camp_plan" Name="Campaña Planes de Pensiones" xsi:schemaLocation="http://www.wfmc.org/2002/XPDL1.0 http://wfmc.org/standards/docs/TC-1025_schema_10_xpdl.xsd">
+    <PackageHeader>
+        <XPDLVersion>1.0</XPDLVersion>
+        <Vendor/>
+        <Created/>
+    </PackageHeader>
+    <Script Type="text/javascript"/>
+    <Participants>
+        <Participant Id="riesgos" Name="Riesgos">
+            <ParticipantType Type="ROLE"/>
+        </Participant>
+        <Participant Id="contact_center" Name="Contact Center">
+            <ParticipantType Type="ROLE"/>
+        </Participant>
+        <Participant Id="datos" Name="Data Brothers">
+            <ParticipantType Type="ROLE"/>
+        </Participant>
+    </Participants>
+    <Applications>
+        <Application Id="default_application"/>
+    </Applications>
+    <WorkflowProcesses>
+        <WorkflowProcess Id="proceso_plan" Name="Proceso concesión plan">
+            <ProcessHeader DurationUnit="D">
+                <Limit>7</Limit>
+            </ProcessHeader>
+            <DataFields>
+                <DataField Id="decision_cc" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="info_necesaria" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="envio_email_info" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="info_recibida" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="evaluacion_riesgos" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="info_adicional_ok" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="alta_fie" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="verificacion_traspaso" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="firma_docs" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="validacion_prestamo" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="posicion_plan_externo" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="alta_aportacion" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="cliente" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="importe" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="subida_docs" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="fichero_creado" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+            </DataFields>
+            <Activities>
+                <Activity Id="route1">
+                    <Route/>
+                    <Performer>contact_center</Performer>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="transition2"/>
+                                    <TransitionRef Id="transition7"/>
+                                    <TransitionRef Id="transition8"/>
+                                    <TransitionRef Id="transition12"/>
+                                    <TransitionRef Id="transition46"/>
+                                    <TransitionRef Id="transition42"/>
+                                    <TransitionRef Id="transition44"/>
+                                    <TransitionRef Id="transition43"/>
+                                    <TransitionRef Id="transition62"/>
+                                    <TransitionRef Id="transition65"/>
+                                    <TransitionRef Id="transition67"/>
+                                    <TransitionRef Id="transition69"/>
+                                    <TransitionRef Id="transition71"/>
+                                    <TransitionRef Id="transition73"/>
+                                    <TransitionRef Id="transition75"/>
+                                    <TransitionRef Id="transition77"/>
+                                    <TransitionRef Id="transition79"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="contact_center"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="418,131"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="evaluacion_riesgos" Name="Evaluación de Riesgos">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>riesgos</Performer>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="riesgos"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="915,22"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="email_1_2_no_cumple" Name="Email no cumple">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>contact_center</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="contact_center"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="653,45"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="email_1_3_no_interesa" Name="Email no interesa">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>contact_center</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="contact_center"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="858,95"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="route4">
+                    <Route/>
+                    <Performer>contact_center</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="contact_center"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="1059,154"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="route7">
+                    <Route/>
+                    <Performer>contact_center</Performer>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="contact_center"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="695,228"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="recepcion_info" Name="Recepción info">
+                    <Limit>2</Limit>
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>contact_center</Performer>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="contact_center"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="1395,213"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="route7_1">
+                    <Route/>
+                    <Performer>contact_center</Performer>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="transition26"/>
+                                    <TransitionRef Id="transition83"/>
+                                    <TransitionRef Id="transition86"/>
+                                    <TransitionRef Id="transition88"/>
+                                    <TransitionRef Id="transition90"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="contact_center"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="817,379"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="route8">
+                    <Route/>
+                    <Performer>contact_center</Performer>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="transition25"/>
+                                    <TransitionRef Id="transition23"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="contact_center"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="963,368"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="route9">
+                    <Route/>
+                    <Performer>riesgos</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="riesgos"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="616,27"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="route11">
+                    <Route/>
+                    <Performer>riesgos</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="riesgos"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="1284,18"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="email_rechazo_riesgos" Name="Email rechazo riesgos">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>riesgos</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="riesgos"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="1435,129"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="info_adicional" Name="Info adicional necesaria">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>contact_center</Performer>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="contact_center"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="1457,419"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="route12">
+                    <Route/>
+                    <Performer>contact_center</Performer>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="transition37"/>
+                                    <TransitionRef Id="transition48"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="contact_center"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="1481,687"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="route14">
+                    <Route/>
+                    <Performer>contact_center</Performer>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="contact_center"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="1092,689"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="alta_en_fie" Name="Alta en FIE">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>contact_center</Performer>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="contact_center"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="433,950"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="route15">
+                    <Route/>
+                    <Performer>contact_center</Performer>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="transition41"/>
+                                    <TransitionRef Id="transition106"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="contact_center"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="208,900"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="route16">
+                    <Route/>
+                    <Performer>riesgos</Performer>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="transition52"/>
+                                    <TransitionRef Id="transition53"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="riesgos"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="485,50"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="pendiente_gestion_inicial" Name="Pendiente gestión inicial">
+                    <Limit>1</Limit>
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>contact_center</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="contact_center"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="67,268"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="route13">
+                    <Route/>
+                    <Performer>contact_center</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="contact_center"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="54,187"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="email_1_1_no_contactado" Name="Email no contactado">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>contact_center</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="contact_center"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="145,10"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="verificar_firma_docs" Name="Verificar firma docs">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>datos</Performer>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="datos"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="122,168"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="route14_1">
+                    <Route/>
+                    <Performer>datos</Performer>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="transition50"/>
+                                    <TransitionRef Id="transition101"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="datos"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="96,56"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="validacion_prestamo" Name="Validación préstamo">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>riesgos</Performer>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="riesgos"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="65,45"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="route15_1">
+                    <Route/>
+                    <Performer>riesgos</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="riesgos"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="566,167"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="verificar_traspaso" Name="Verificar traspaso">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>contact_center</Performer>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="contact_center"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="717,904"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="route16_1">
+                    <Route/>
+                    <Performer>riesgos</Performer>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="transition55"/>
+                                    <TransitionRef Id="transition97"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="riesgos"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="820,139"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="alta_aportacion" Name="Alta aportación plan">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>datos</Performer>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="datos"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="685,221"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="cliente_traspaso_email_info_nomina" Name="Cliente Traspaso Email info nomina">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>contact_center</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="contact_center"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="600,365"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="cliente_traspaso_email_info_nomina_irpf3_vida" Name="Cliente Traspaso Email info nomina, irpf 3 años y vida">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>contact_center</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="contact_center"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="397,419"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="cliente_traspaso_email_info_nomina_irpf_vida" Name="Cliente Traspaso Email info nomina, irpf y vida">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>contact_center</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="contact_center"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="503,283"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="no_cliente_traspaso_email_info_nomina" Name="No Cliente Traspaso Email info nomina">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>contact_center</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="contact_center"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="613,509"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="no_cliente_traspaso_email_info_nomina_irpf_vida" Name="No Cliente Traspaso Email info nomina, irpf y vida">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>contact_center</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="contact_center"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="510,544"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="no_cliente_traspaso_email_info_nomina_irpf3_vida" Name="No Cliente Traspaso Email info nomina, irpf 3 años y vida">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>contact_center</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="contact_center"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="368,574"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="no_cliente_no_traspaso_email_info_nomina" Name="No Cliente no Traspaso Email info nomina">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>contact_center</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="contact_center"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="635,665"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="no_cliente_no_traspaso_email_info_nomina_irpf_vida" Name="No Cliente no Traspaso Email info nomina, irpf y vida">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>contact_center</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="contact_center"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="481,703"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="no_cliente_no_traspaso_email_info_nomina_irpf3_vida" Name="No Cliente no Traspaso Email info nomina, irpf 3 años y vida">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>contact_center</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="contact_center"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="361,726"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="cliente_no_traspaso_email_info_nomina" Name="Cliente no Traspaso Email info nomina">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>contact_center</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="contact_center"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="641,786"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="cliente_no_traspaso_email_info_nomina_irpf_vida" Name="Cliente no Traspaso Email info nomina, irpf y vida">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>contact_center</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="contact_center"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="472,819"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="cliente_no_traspaso_email_info_nomina_irpf3_vida" Name="Cliente no Traspaso Email info nomina, irpf 3 años y vida">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>contact_center</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="contact_center"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="340,843"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="actualizar_fecha_email" Name="Actualizar fecha email">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>contact_center</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="contact_center"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="816,243"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="email_6_paso_a_riesgos_4000" Name="Email paso a riesgos 4000">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>contact_center</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="contact_center"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="950,518"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="email_6_paso_a_riesgos_5000" Name="Email paso a riesgos 5000">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>contact_center</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="contact_center"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="919,606"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="email_6_paso_a_riesgos_6000" Name="Email paso a riesgos 6000">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>contact_center</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="contact_center"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="865,674"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="email_6_paso_a_riesgos_7000" Name="Email paso a riesgos 7000">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>contact_center</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="contact_center"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="820,746"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="email_6_paso_a_riesgos_8000" Name="Email paso a riesgos 8000">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>contact_center</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="contact_center"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="771,836"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="route17">
+                    <Route/>
+                    <Performer>datos</Performer>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="transition96"/>
+                                    <TransitionRef Id="transition98"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="datos"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="797,59"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="route18">
+                    <Route/>
+                    <Performer>datos</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="datos"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="1030,62"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="route19">
+                    <Route/>
+                    <Performer>riesgos</Performer>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="transition102"/>
+                                    <TransitionRef Id="transition104"/>
+                                    <TransitionRef Id="transition105"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="riesgos"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="1114,86"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="subir_docs" Name="Subir docs a App">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>datos</Performer>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="datos"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="358,52"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="route19_1">
+                    <Route/>
+                    <Performer>datos</Performer>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="transition107"/>
+                                    <TransitionRef Id="transition108"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="datos"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="366,185"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="carga_en_fichero" Name="Cargar en fichero">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>datos</Performer>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="datos"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="480,42"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="route20">
+                    <Route/>
+                    <Performer>datos</Performer>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="transition111"/>
+                                    <TransitionRef Id="transition112"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="datos"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="480,180"/>
+                    </ExtendedAttributes>
+                </Activity>
+            </Activities>
+            <Transitions>
+                <Transition From="route1" Id="transition2" To="email_1_1_no_contactado">
+                    <Condition Type="CONDITION">decision_cc === 'no_contactado'</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route1" Id="transition7" To="email_1_2_no_cumple">
+                    <Condition Type="CONDITION">decision_cc === 'no_cumple_filtro'</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route1" Id="transition8" To="email_1_3_no_interesa">
+                    <Condition Type="CONDITION">decision_cc === 'no_interesa'</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route1" Id="transition12" To="route4">
+                    <Condition Type="CONDITION">decision_cc === 'gestion_manual'</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="cliente_traspaso_email_info_nomina" Id="transition20" To="route7">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route8" Id="transition25" To="route7_1">
+                    <Condition Type="CONDITION">info_recibida === 'S'</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route8" Id="transition23" To="recepcion_info">
+                    <Condition Type="OTHERWISE"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route7_1" Id="transition26" To="email_6_paso_a_riesgos_4000">
+                    <Condition Type="CONDITION">importe === '4000'</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route11" Id="transition30" To="email_rechazo_riesgos">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="info_adicional" Id="transition32" To="route12">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="email_6_paso_a_riesgos_4000" Id="transition34" To="route14">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route12" Id="transition37" To="info_adicional">
+                    <Condition Type="OTHERWISE"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="alta_en_fie" Id="transition39" To="route15">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route15" Id="transition41" To="alta_en_fie">
+                    <Condition Type="OTHERWISE"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="cliente_traspaso_email_info_nomina_irpf3_vida" Id="transition45" To="route7">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route1" Id="transition46" To="cliente_traspaso_email_info_nomina">
+                    <Condition Type="CONDITION">(decision_cc === 'cumple_estudiar' || decision_cc === 'cumple_ok') &amp;&amp; envio_email_info === 'S' &amp;&amp; info_necesaria === 'nominas' &amp;&amp; cliente==='S' &amp;&amp; parseFloat(posicion_plan_externo) &gt; parseFloat('0')</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route1" Id="transition42" To="cliente_traspaso_email_info_nomina_irpf3_vida">
+                    <Condition Type="CONDITION">(decision_cc === 'cumple_estudiar' || decision_cc === 'cumple_ok') &amp;&amp; envio_email_info === 'S' &amp;&amp; info_necesaria === 'nominas_3irpf_vida' &amp;&amp; cliente==='S' &amp;&amp; parseFloat(posicion_plan_externo) &gt; parseFloat('0')</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route1" Id="transition44" To="cliente_traspaso_email_info_nomina_irpf_vida">
+                    <Condition Type="CONDITION">(decision_cc === 'cumple_estudiar' || decision_cc === 'cumple_ok') &amp;&amp; envio_email_info === 'S' &amp;&amp; info_necesaria === 'nominas_irpf_vida' &amp;&amp; cliente==='S' &amp;&amp; parseFloat(posicion_plan_externo) &gt; parseFloat('0')</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route1" Id="transition43" To="pendiente_gestion_inicial">
+                    <Condition Type="OTHERWISE"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route12" Id="transition48" To="route14">
+                    <Condition Type="CONDITION">info_adicional_ok === 'S'</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="verificar_firma_docs" Id="transition40" To="route14_1">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route14_1" Id="transition50" To="verificar_firma_docs">
+                    <Condition Type="OTHERWISE"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="validacion_prestamo" Id="transition51" To="route16">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route16" Id="transition52" To="route15_1">
+                    <Condition Type="CONDITION">validacion_prestamo === 'S'</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route16" Id="transition53" To="validacion_prestamo">
+                    <Condition Type="OTHERWISE"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="verificar_traspaso" Id="transition59" To="route16_1">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route16_1" Id="transition55" To="route9">
+                    <Condition Type="CONDITION">(parseFloat(posicion_plan_externo) &gt; parseFloat('0') &amp;&amp; verificacion_traspaso === 'S') || (posicion_plan_externo === '')</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route13" Id="transition63" To="route1">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route1" Id="transition62" To="no_cliente_traspaso_email_info_nomina">
+                    <Condition Type="CONDITION">(decision_cc === 'cumple_estudiar' || decision_cc === 'cumple_ok') &amp;&amp; envio_email_info === 'S' &amp;&amp; info_necesaria === 'nominas' &amp;&amp; cliente==='' &amp;&amp; parseFloat(posicion_plan_externo) &gt; parseFloat('0')</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="no_cliente_traspaso_email_info_nomina" Id="transition64" To="route7">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route1" Id="transition65" To="no_cliente_traspaso_email_info_nomina_irpf_vida">
+                    <Condition Type="CONDITION">(decision_cc === 'cumple_estudiar' || decision_cc === 'cumple_ok') &amp;&amp; envio_email_info === 'S' &amp;&amp; info_necesaria === 'nominas_irpf_vida' &amp;&amp; cliente==='' &amp;&amp; parseFloat(posicion_plan_externo) &gt; parseFloat('0')</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="no_cliente_traspaso_email_info_nomina_irpf_vida" Id="transition66" To="route7">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route1" Id="transition67" To="no_cliente_traspaso_email_info_nomina_irpf3_vida">
+                    <Condition Type="CONDITION">(decision_cc === 'cumple_estudiar' || decision_cc === 'cumple_ok') &amp;&amp; envio_email_info === 'S' &amp;&amp; info_necesaria === 'nominas_3irpf_vida' &amp;&amp; cliente==='' &amp;&amp; parseFloat(posicion_plan_externo) &gt; parseFloat('0')</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="no_cliente_traspaso_email_info_nomina_irpf3_vida" Id="transition68" To="route7">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route1" Id="transition69" To="no_cliente_no_traspaso_email_info_nomina">
+                    <Condition Type="CONDITION">(decision_cc === 'cumple_estudiar' || decision_cc === 'cumple_ok') &amp;&amp; envio_email_info === 'S' &amp;&amp; info_necesaria === 'nominas' &amp;&amp; cliente==='' &amp;&amp; posicion_plan_externo === ''</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="no_cliente_no_traspaso_email_info_nomina" Id="transition70" To="route7">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route1" Id="transition71" To="no_cliente_no_traspaso_email_info_nomina_irpf_vida">
+                    <Condition Type="CONDITION">(decision_cc === 'cumple_estudiar' || decision_cc === 'cumple_ok') &amp;&amp; envio_email_info === 'S' &amp;&amp; info_necesaria === 'nominas_irpf_vida' &amp;&amp; cliente==='' &amp;&amp; posicion_plan_externo===''</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="no_cliente_no_traspaso_email_info_nomina_irpf_vida" Id="transition72" To="route7">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route1" Id="transition73" To="no_cliente_no_traspaso_email_info_nomina_irpf3_vida">
+                    <Condition Type="CONDITION">(decision_cc === 'cumple_estudiar' || decision_cc === 'cumple_ok') &amp;&amp; envio_email_info === 'S' &amp;&amp; info_necesaria === 'nominas_3irpf_vida' &amp;&amp; cliente==='' &amp;&amp; posicion_plan_externo===''</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="no_cliente_no_traspaso_email_info_nomina_irpf3_vida" Id="transition74" To="route7">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route1" Id="transition75" To="cliente_no_traspaso_email_info_nomina">
+                    <Condition Type="CONDITION">(decision_cc === 'cumple_estudiar' || decision_cc === 'cumple_ok') &amp;&amp; envio_email_info === 'S' &amp;&amp; info_necesaria === 'nominas' &amp;&amp; cliente==='S' &amp;&amp; posicion_plan_externo === ''</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="cliente_no_traspaso_email_info_nomina" Id="transition76" To="route7">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route1" Id="transition77" To="cliente_no_traspaso_email_info_nomina_irpf_vida">
+                    <Condition Type="CONDITION">(decision_cc === 'cumple_estudiar' || decision_cc === 'cumple_ok') &amp;&amp; envio_email_info === 'S' &amp;&amp; info_necesaria === 'nominas_irpf_vida' &amp;&amp; cliente==='S' &amp;&amp; posicion_plan_externo===''</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="cliente_no_traspaso_email_info_nomina_irpf_vida" Id="transition78" To="route7">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route1" Id="transition79" To="cliente_no_traspaso_email_info_nomina_irpf3_vida">
+                    <Condition Type="CONDITION">(decision_cc === 'cumple_estudiar' || decision_cc === 'cumple_ok') &amp;&amp; envio_email_info === 'S' &amp;&amp; info_necesaria === 'nominas_3irpf_vida' &amp;&amp; cliente==='S' &amp;&amp; posicion_plan_externo===''</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="cliente_no_traspaso_email_info_nomina_irpf3_vida" Id="transition80" To="route7">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="cliente_traspaso_email_info_nomina_irpf_vida" Id="transition84" To="route7">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route7_1" Id="transition83" To="email_6_paso_a_riesgos_5000">
+                    <Condition Type="CONDITION">importe === '5000'</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="email_6_paso_a_riesgos_5000" Id="transition85" To="route14">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route7_1" Id="transition86" To="email_6_paso_a_riesgos_6000">
+                    <Condition Type="CONDITION">importe === '6000'</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="email_6_paso_a_riesgos_6000" Id="transition87" To="route14">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route7_1" Id="transition88" To="email_6_paso_a_riesgos_7000">
+                    <Condition Type="CONDITION">importe === '7000'</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="email_6_paso_a_riesgos_7000" Id="transition89" To="route14">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route7_1" Id="transition90" To="email_6_paso_a_riesgos_8000">
+                    <Condition Type="CONDITION">importe === '8000'</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="email_6_paso_a_riesgos_8000" Id="transition91" To="route14">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route7" Id="transition109" To="actualizar_fecha_email">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route14_1" Id="transition101" To="validacion_prestamo">
+                    <Condition Type="CONDITION">firma_docs === 'S'</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route9" Id="transition99" To="alta_en_fie">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route16_1" Id="transition97" To="verificar_traspaso">
+                    <Condition Type="CONDITION">parseFloat(posicion_plan_externo) &gt; parseFloat('0') &amp;&amp; verificacion_traspaso !== 'S'</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route14" Id="transition95" To="evaluacion_riesgos">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="recepcion_info" Id="transition82" To="route8">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="actualizar_fecha_email" Id="transition94" To="recepcion_info">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="pendiente_gestion_inicial" Id="transition92" To="route1">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="alta_aportacion" Id="transition81" To="route17">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route17" Id="transition96" To="route18">
+                    <Condition Type="CONDITION">alta_aportacion === 'S'</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route17" Id="transition98" To="alta_aportacion">
+                    <Condition Type="OTHERWISE"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="evaluacion_riesgos" Id="transition100" To="route19">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route19" Id="transition102" To="route16_1">
+                    <Condition Type="CONDITION">evaluacion_riesgos === 'aprobar'</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route19" Id="transition104" To="route11">
+                    <Condition Type="CONDITION">evaluacion_riesgos === 'rechazar'</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route19" Id="transition105" To="info_adicional">
+                    <Condition Type="CONDITION">evaluacion_riesgos === 'info_adicional'</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route15" Id="transition106" To="subir_docs">
+                    <Condition Type="CONDITION">alta_fie === 'S'</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="subir_docs" Id="transition103" To="route19_1">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route19_1" Id="transition107" To="verificar_firma_docs">
+                    <Condition Type="CONDITION">subida_docs === 'S'</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route19_1" Id="transition108" To="subir_docs">
+                    <Condition Type="OTHERWISE"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route15_1" Id="transition110" To="carga_en_fichero">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="carga_en_fichero" Id="transition93" To="route20">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route20" Id="transition111" To="alta_aportacion">
+                    <Condition Type="CONDITION">fichero_creado === 'S'</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route20" Id="transition112" To="carga_en_fichero">
+                    <Condition Type="OTHERWISE"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+            </Transitions>
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_WORKFLOW_PARTICIPANT_ORDER" Value="contact_center;riesgos;datos"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_END_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=contact_center,CONNECTING_ACTIVITY_ID=email_1_2_no_cumple,X_OFFSET=1143,Y_OFFSET=60,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=END_DEFAULT"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_END_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=contact_center,CONNECTING_ACTIVITY_ID=email_1_3_no_interesa,X_OFFSET=1145,Y_OFFSET=107,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=END_DEFAULT"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_END_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=contact_center,CONNECTING_ACTIVITY_ID=route4,X_OFFSET=1144,Y_OFFSET=160,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=END_DEFAULT"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_START_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=contact_center,CONNECTING_ACTIVITY_ID=route13,X_OFFSET=66,Y_OFFSET=24,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=START_DEFAULT"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_END_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=contact_center,CONNECTING_ACTIVITY_ID=email_1_1_no_contactado,X_OFFSET=1186,Y_OFFSET=20,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=END_DEFAULT"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_END_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=riesgos,CONNECTING_ACTIVITY_ID=email_rechazo_riesgos,X_OFFSET=1653,Y_OFFSET=140,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=END_DEFAULT"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_END_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=datos,CONNECTING_ACTIVITY_ID=route18,X_OFFSET=1271,Y_OFFSET=69,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=END_DEFAULT"/>
+            </ExtendedAttributes>
+        </WorkflowProcess>
+    </WorkflowProcesses>
+    <ExtendedAttributes>
+        <ExtendedAttribute Name="EDITING_TOOL" Value="Web Workflow Designer"/>
+        <ExtendedAttribute Name="EDITING_TOOL_VERSION" Value="5.0-pre-alpha"/>
+    </ExtendedAttributes>
+</Package>
