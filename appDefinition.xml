@@ -1,0 +1,14 @@
+<appDefinition>
+   <id>Pruebas2021</id>
+   <version></version>
+   <name>Pruebas2021</name>
+   <packageDefinitionList/>
+   <formDefinitionList/>
+   <userviewDefinitionList/>
+   <datalistDefinitionList/>
+   <builderDefinitionList/>
+   <pluginDefaultPropertiesList/>
+   <environmentVariableList/>
+   <messageList/>
+   <resourceList/>
+</appDefinition>
