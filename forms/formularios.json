@@ -8,7 +8,7 @@
                 "className": "org.joget.apps.form.lib.TextField",
                 "properties": {
                     "id": "field1",
-                    "label": "Text Field",
+                    "label": "Field1",
                     "maxlength": "",
                     "placeholder": "",
                     "readonly": "",
