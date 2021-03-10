@@ -1,0 +1,1829 @@
+{
+    "className": "org.joget.apps.form.model.Form",
+    "elements": [
+        {
+            "className": "org.joget.apps.form.model.Section",
+            "elements": [
+                {
+                    "className": "org.joget.apps.form.model.Column",
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "id": "nombre",
+                                "label": "Nombre",
+                                "maxlength": "",
+                                "placeholder": "",
+                                "readonly": "",
+                                "readonlyLabel": "",
+                                "size": "",
+                                "storeNumeric": "",
+                                "style": "",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "custom-regex": "",
+                                        "mandatory": "",
+                                        "message": "",
+                                        "type": ""
+                                    }
+                                },
+                                "value": "",
+                                "workflowVariable": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "id": "apellidos",
+                                "label": "Apellidos",
+                                "maxlength": "",
+                                "placeholder": "",
+                                "readonly": "",
+                                "readonlyLabel": "",
+                                "size": "",
+                                "storeNumeric": "",
+                                "style": "",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "custom-regex": "",
+                                        "mandatory": "",
+                                        "message": "",
+                                        "type": ""
+                                    }
+                                },
+                                "value": "",
+                                "workflowVariable": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "id": "email",
+                                "label": "Email",
+                                "maxlength": "",
+                                "placeholder": "",
+                                "readonly": "",
+                                "readonlyLabel": "",
+                                "size": "",
+                                "storeNumeric": "",
+                                "style": "",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "custom-regex": "",
+                                        "mandatory": "",
+                                        "message": "",
+                                        "type": "email"
+                                    }
+                                },
+                                "value": "",
+                                "workflowVariable": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "id": "telefono",
+                                "label": "Teléfono",
+                                "maxlength": "",
+                                "placeholder": "",
+                                "readonly": "",
+                                "readonlyLabel": "",
+                                "size": "",
+                                "storeNumeric": "",
+                                "style": "",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "custom-regex": "",
+                                        "mandatory": "",
+                                        "message": "",
+                                        "type": ""
+                                    }
+                                },
+                                "value": "",
+                                "workflowVariable": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "id": "dni",
+                                "label": "NIF/CIF",
+                                "maxlength": "",
+                                "placeholder": "",
+                                "readonly": "",
+                                "readonlyLabel": "",
+                                "size": "",
+                                "storeNumeric": "",
+                                "style": "",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "custom-regex": "",
+                                        "mandatory": "",
+                                        "message": "",
+                                        "type": ""
+                                    }
+                                },
+                                "value": "",
+                                "workflowVariable": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "id": "domicilio",
+                                "label": "Domicilio",
+                                "maxlength": "",
+                                "placeholder": "",
+                                "readonly": "",
+                                "readonlyLabel": "",
+                                "size": "",
+                                "storeNumeric": "",
+                                "style": "",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "custom-regex": "",
+                                        "mandatory": "",
+                                        "message": "",
+                                        "type": ""
+                                    }
+                                },
+                                "value": "",
+                                "workflowVariable": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "id": "pais_residencia",
+                                "label": "País residencia",
+                                "maxlength": "",
+                                "placeholder": "",
+                                "readonly": "",
+                                "readonlyLabel": "",
+                                "size": "",
+                                "storeNumeric": "",
+                                "style": "",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "custom-regex": "",
+                                        "mandatory": "",
+                                        "message": "",
+                                        "type": ""
+                                    }
+                                },
+                                "value": "",
+                                "workflowVariable": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "id": "nacionalidad",
+                                "label": "Nacionalidad",
+                                "maxlength": "",
+                                "placeholder": "",
+                                "readonly": "",
+                                "readonlyLabel": "",
+                                "size": "",
+                                "storeNumeric": "",
+                                "style": "",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "custom-regex": "",
+                                        "mandatory": "",
+                                        "message": "",
+                                        "type": ""
+                                    }
+                                },
+                                "value": "",
+                                "workflowVariable": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.DatePicker",
+                            "properties": {
+                                "allowManual": "",
+                                "currentDateAs": "",
+                                "dataFormat": "",
+                                "datePickerType": "",
+                                "endDateFieldId": "",
+                                "format": "",
+                                "id": "fecha_nacimiento",
+                                "label": "Fecha nacimiento",
+                                "placeholder": "",
+                                "readonly": "",
+                                "readonlyLabel": "",
+                                "startDateFieldId": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "value": "",
+                                "workflowVariable": "",
+                                "yearRange": "c-10:c+10"
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.CheckBox",
+                            "properties": {
+                                "controlField": "",
+                                "id": "cliente_myinvestor",
+                                "label": "Cliente MyInvestor",
+                                "options": [{
+                                    "grouping": "",
+                                    "label": "S",
+                                    "value": "S"
+                                }],
+                                "optionsBinder": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "readonly": "",
+                                "readonlyLabel": "",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "custom-regex": "",
+                                        "mandatory": "",
+                                        "message": "",
+                                        "type": ""
+                                    }
+                                },
+                                "value": "",
+                                "workflowVariable": "cliente"
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "id": "posicion_plan_externo",
+                                "label": "Posición plan externo a traspasar",
+                                "maxlength": "",
+                                "numOfDecimal": "0",
+                                "placeholder": "Dejar en blanco si es 0\u20ac",
+                                "postfix": "\u20ac",
+                                "prefix": "",
+                                "readonly": "",
+                                "readonlyLabel": "",
+                                "size": "",
+                                "storeNumeric": "true",
+                                "style": "euro",
+                                "useThousandSeparator": "true",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "custom-regex": "",
+                                        "mandatory": "",
+                                        "message": "",
+                                        "type": "numeric"
+                                    }
+                                },
+                                "value": "",
+                                "workflowVariable": "posicion_plan_externo"
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.SelectBox",
+                            "properties": {
+                                "controlField": "",
+                                "id": "importe",
+                                "label": "Importe préstamo",
+                                "multiple": "",
+                                "options": [
+                                    {
+                                        "grouping": "",
+                                        "label": "8000",
+                                        "value": "8000"
+                                    },
+                                    {
+                                        "grouping": "",
+                                        "label": "7000",
+                                        "value": "7000"
+                                    },
+                                    {
+                                        "grouping": "",
+                                        "label": "6000",
+                                        "value": "6000"
+                                    },
+                                    {
+                                        "grouping": "",
+                                        "label": "5000",
+                                        "value": "5000"
+                                    },
+                                    {
+                                        "grouping": "",
+                                        "label": "4000",
+                                        "value": "4000"
+                                    }
+                                ],
+                                "optionsBinder": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "readonly": "",
+                                "readonlyLabel": "",
+                                "size": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "value": "8000",
+                                "workflowVariable": "importe"
+                            }
+                        }
+                    ],
+                    "properties": {
+                        "customWidth": "",
+                        "horizontal": "",
+                        "label": "Datos cliente",
+                        "width": "32%"
+                    }
+                },
+                {
+                    "className": "org.joget.apps.form.model.Column",
+                    "elements": [{
+                        "className": "org.joget.plugin.SectionTabs",
+                        "properties": {
+                            "id": "field26",
+                            "sections": "section2,section3,section4"
+                        }
+                    }],
+                    "properties": {
+                        "customWidth": "",
+                        "horizontal": "",
+                        "label": "Proceso de apertura",
+                        "width": "32%"
+                    }
+                },
+                {
+                    "className": "org.joget.apps.form.model.Column",
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.FileUpload",
+                            "properties": {
+                                "attachment": "true",
+                                "fileType": "",
+                                "fileTypeMsg": "Invalid file type",
+                                "id": "doc_irpf",
+                                "label": "IRPF",
+                                "maxSize": "",
+                                "maxSizeMsg": "File size limit exceeded",
+                                "multiple": "true",
+                                "padding": "",
+                                "permissionType": "",
+                                "readonly": "",
+                                "removeFile": "",
+                                "size": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                }
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.FileUpload",
+                            "properties": {
+                                "attachment": "true",
+                                "fileType": "",
+                                "fileTypeMsg": "Invalid file type",
+                                "id": "doc_nomina",
+                                "label": "Nómina",
+                                "maxSize": "",
+                                "maxSizeMsg": "File size limit exceeded",
+                                "multiple": "true",
+                                "padding": "",
+                                "permissionType": "",
+                                "readonly": "",
+                                "removeFile": "",
+                                "size": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                }
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.FileUpload",
+                            "properties": {
+                                "attachment": "true",
+                                "fileType": "",
+                                "fileTypeMsg": "Invalid file type",
+                                "id": "doc_vida_laboral",
+                                "label": "Vida laboral",
+                                "maxSize": "",
+                                "maxSizeMsg": "File size limit exceeded",
+                                "multiple": "true",
+                                "padding": "",
+                                "permissionType": "",
+                                "readonly": "",
+                                "removeFile": "",
+                                "size": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                }
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.FileUpload",
+                            "properties": {
+                                "attachment": "true",
+                                "fileType": "",
+                                "fileTypeMsg": "Invalid file type",
+                                "id": "doc_justificante_traspaso",
+                                "label": "Justificante traspaso",
+                                "maxSize": "",
+                                "maxSizeMsg": "File size limit exceeded",
+                                "multiple": "true",
+                                "padding": "",
+                                "permissionType": "",
+                                "readonly": "",
+                                "removeFile": "",
+                                "size": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                }
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.FileUpload",
+                            "properties": {
+                                "attachment": "true",
+                                "fileType": "",
+                                "fileTypeMsg": "Invalid file type",
+                                "id": "doc_otros",
+                                "label": "Otros docs de riesgos",
+                                "maxSize": "",
+                                "maxSizeMsg": "File size limit exceeded",
+                                "multiple": "true",
+                                "padding": "",
+                                "permissionType": "",
+                                "readonly": "",
+                                "removeFile": "",
+                                "size": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                }
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.FileUpload",
+                            "properties": {
+                                "attachment": "",
+                                "fileType": "",
+                                "fileTypeMsg": "Invalid file type",
+                                "id": "doc_emails",
+                                "label": "Emails",
+                                "maxSize": "",
+                                "maxSizeMsg": "File size limit exceeded",
+                                "multiple": "true",
+                                "padding": "",
+                                "permissionType": "",
+                                "readonly": "",
+                                "removeFile": "",
+                                "size": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                }
+                            }
+                        }
+                    ],
+                    "properties": {
+                        "customWidth": "",
+                        "horizontal": "",
+                        "label": "Documentación",
+                        "width": "32%"
+                    }
+                }
+            ],
+            "properties": {
+                "comment": "",
+                "id": "section1",
+                "label": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "permissionReadonly": "",
+                "readonly": "",
+                "readonlyLabel": "",
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                }
+            }
+        },
+        {
+            "className": "org.joget.apps.form.model.Section",
+            "elements": [{
+                "className": "org.joget.apps.form.model.Column",
+                "elements": [
+                    {
+                        "className": "org.joget.apps.form.lib.TextArea",
+                        "properties": {
+                            "cols": "50",
+                            "id": "comentario",
+                            "label": "Comentario",
+                            "placeholder": "",
+                            "readonly": "",
+                            "readonlyLabel": "",
+                            "rows": "5",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "value": "",
+                            "workflowVariable": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.HiddenField",
+                        "properties": {
+                            "id": "owner",
+                            "useDefaultWhenEmpty": "true",
+                            "value": "",
+                            "workflowVariable": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.HiddenField",
+                        "properties": {
+                            "id": "accion",
+                            "useDefaultWhenEmpty": "true",
+                            "value": "",
+                            "workflowVariable": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.HiddenField",
+                        "properties": {
+                            "id": "link",
+                            "useDefaultWhenEmpty": "true",
+                            "value": "",
+                            "workflowVariable": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.HiddenField",
+                        "properties": {
+                            "id": "dgs",
+                            "useDefaultWhenEmpty": "true",
+                            "value": "",
+                            "workflowVariable": ""
+                        }
+                    }
+                ],
+                "properties": {"width": "100%"}
+            }],
+            "properties": {
+                "comment": "",
+                "id": "section5",
+                "label": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "permissionReadonly": "",
+                "readonly": "",
+                "readonlyLabel": "",
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                }
+            }
+        },
+        {
+            "className": "org.joget.apps.form.model.Section",
+            "elements": [{
+                "className": "org.joget.apps.form.model.Column",
+                "elements": [
+                    {
+                        "className": "org.joget.apps.form.lib.DatePicker",
+                        "properties": {
+                            "allowManual": "true",
+                            "currentDateAs": "",
+                            "dataFormat": "",
+                            "datePickerType": "dateTime",
+                            "endDateFieldId": "",
+                            "format": "",
+                            "format24hr": "true",
+                            "id": "fecha_prox_gestion",
+                            "label": "<span style=\"color:blue;\">Próximo contacto<\/span>",
+                            "placeholder": "Agendar próximo contacto",
+                            "readonly": "",
+                            "readonlyLabel": "",
+                            "startDateFieldId": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "value": "",
+                            "workflowVariable": "",
+                            "yearRange": "c-10:c+10"
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.CustomHTML",
+                        "properties": {
+                            "autoPopulate": "",
+                            "id": "field32",
+                            "label": "",
+                            "value": "<hr style=\"border-top: dotted 2px; />"
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.SelectBox",
+                        "properties": {
+                            "controlField": "",
+                            "id": "decision_cc",
+                            "label": "<span style=\"color:blue\">Cualificación<\/span>",
+                            "multiple": "",
+                            "options": [
+                                {
+                                    "grouping": "",
+                                    "label": "",
+                                    "value": ""
+                                },
+                                {
+                                    "grouping": "",
+                                    "label": "No contactado",
+                                    "value": "no_contactado"
+                                },
+                                {
+                                    "grouping": "",
+                                    "label": "No cumple filtro",
+                                    "value": "no_cumple_filtro"
+                                },
+                                {
+                                    "grouping": "",
+                                    "label": "No interesa",
+                                    "value": "no_interesa"
+                                },
+                                {
+                                    "grouping": "",
+                                    "label": "Cumple OK",
+                                    "value": "cumple_ok"
+                                },
+                                {
+                                    "grouping": "",
+                                    "label": "Cumple Estudiar",
+                                    "value": "cumple_estudiar"
+                                },
+                                {
+                                    "grouping": "",
+                                    "label": "Gestión manual",
+                                    "value": "gestion_manual"
+                                }
+                            ],
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "readonly": "",
+                            "readonlyLabel": "",
+                            "size": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "value": "",
+                            "workflowVariable": "decision_cc"
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.SelectBox",
+                        "properties": {
+                            "controlField": "decision_cc",
+                            "id": "info_necesaria",
+                            "label": "<span style=\"color:blue\">Info necesaria<\/span>",
+                            "multiple": "",
+                            "options": [
+                                {
+                                    "grouping": "",
+                                    "label": "",
+                                    "value": ""
+                                },
+                                {
+                                    "grouping": "cumple_ok",
+                                    "label": "Nóminas",
+                                    "value": "nominas"
+                                },
+                                {
+                                    "grouping": "cumple_ok",
+                                    "label": "Nóminas, IRPF y vida laboral",
+                                    "value": "nominas_irpf_vida"
+                                },
+                                {
+                                    "grouping": "cumple_ok",
+                                    "label": "Nóminas, IRPF 3 años y vida laboral",
+                                    "value": "nominas_3irpf_vida"
+                                },
+                                {
+                                    "grouping": "cumple_estudiar",
+                                    "label": "Nóminas",
+                                    "value": "nominas"
+                                },
+                                {
+                                    "grouping": "cumple_estudiar",
+                                    "label": "Nóminas, IRPF y vida laboral",
+                                    "value": "nominas_irpf_vida"
+                                },
+                                {
+                                    "grouping": "cumple_estudiar",
+                                    "label": "Nóminas, IRPF 3 años y vida laboral",
+                                    "value": "nominas_3irpf_vida"
+                                }
+                            ],
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "readonly": "",
+                            "readonlyLabel": "",
+                            "size": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "value": "",
+                            "workflowVariable": "info_necesaria"
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.CheckBox",
+                        "properties": {
+                            "controlField": "decision_cc",
+                            "id": "envio_email_inicial",
+                            "label": "<span style=\"color:blue\">Envío email<\/span>",
+                            "options": [
+                                {
+                                    "grouping": "cumple_ok",
+                                    "label": "S",
+                                    "value": "S"
+                                },
+                                {
+                                    "grouping": "cumple_estudiar",
+                                    "label": "S",
+                                    "value": "S"
+                                }
+                            ],
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "readonly": "",
+                            "readonlyLabel": "",
+                            "validator": {
+                                "className": "org.joget.apps.form.lib.DefaultValidator",
+                                "properties": {
+                                    "custom-regex": "",
+                                    "mandatory": "",
+                                    "message": "",
+                                    "type": ""
+                                }
+                            },
+                            "value": "",
+                            "workflowVariable": "envio_email_info"
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.TextField",
+                        "properties": {
+                            "id": "fecha_envio_email",
+                            "label": "<span style=\"color:blue\">Fecha Email<\/span>",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "readonly": "true",
+                            "readonlyLabel": "true",
+                            "size": "",
+                            "storeNumeric": "",
+                            "style": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "value": "",
+                            "workflowVariable": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.CustomHTML",
+                        "properties": {
+                            "autoPopulate": "",
+                            "id": "field32",
+                            "label": "",
+                            "value": "<hr style=\"border-top: dotted 2px; />"
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.CheckBox",
+                        "properties": {
+                            "controlField": "envio_email_inicial",
+                            "id": "info_recibida",
+                            "label": "<span style=\"color:blue\">Info recibida<\/span>",
+                            "options": [{
+                                "grouping": "S",
+                                "label": "S",
+                                "value": "S"
+                            }],
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "readonly": "",
+                            "readonlyLabel": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "value": "",
+                            "workflowVariable": "info_recibida"
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.CustomHTML",
+                        "properties": {
+                            "autoPopulate": "",
+                            "id": "field32",
+                            "label": "",
+                            "value": "<hr style=\"border-top: dotted 2px; />"
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.CheckBox",
+                        "properties": {
+                            "controlField": "evaluacion_riesgos",
+                            "id": "info_adicional_ok",
+                            "label": "<span style=\"color:blue\">Info adicional OK<\/span>",
+                            "options": [{
+                                "grouping": "info_adicional",
+                                "label": "S",
+                                "value": "S"
+                            }],
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "readonly": "",
+                            "readonlyLabel": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "value": "",
+                            "workflowVariable": "info_adicional_ok"
+                        }
+                    }
+                ],
+                "properties": {"width": "100%"}
+            }],
+            "properties": {
+                "comment": "",
+                "id": "section2",
+                "label": "Cualificación",
+                "loadBinder": {
+                    "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+                    "properties": {}
+                },
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "permissionReadonly": "",
+                "readonly": "",
+                "readonlyLabel": "",
+                "storeBinder": {
+                    "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+                    "properties": {}
+                }
+            }
+        },
+        {
+            "className": "org.joget.apps.form.model.Section",
+            "elements": [{
+                "className": "org.joget.apps.form.model.Column",
+                "elements": [
+                    {
+                        "className": "org.joget.apps.form.lib.TextField",
+                        "properties": {
+                            "id": "importe_nomina",
+                            "label": "<span style=\"color:red\">Nómina mensual<\/span>",
+                            "maxlength": "",
+                            "numOfDecimal": "0",
+                            "placeholder": "",
+                            "postfix": "\u20ac",
+                            "prefix": "",
+                            "readonly": "",
+                            "readonlyLabel": "",
+                            "size": "",
+                            "storeNumeric": "true",
+                            "style": "euro",
+                            "useThousandSeparator": "true",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "value": "",
+                            "workflowVariable": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.TextField",
+                        "properties": {
+                            "id": "antiguedad_empresa",
+                            "label": "<span style=\"color:red\">Antigüedad<\/span>",
+                            "maxlength": "",
+                            "placeholder": "en años",
+                            "readonly": "",
+                            "readonlyLabel": "",
+                            "size": "",
+                            "storeNumeric": "true",
+                            "style": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "value": "",
+                            "workflowVariable": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.SelectBox",
+                        "properties": {
+                            "controlField": "info_recibida",
+                            "id": "evaluacion_riesgos",
+                            "label": "<span style=\"color:red\">Evaluación<\/span>",
+                            "multiple": "",
+                            "options": [
+                                {
+                                    "grouping": "",
+                                    "label": "",
+                                    "value": ""
+                                },
+                                {
+                                    "grouping": "S",
+                                    "label": "Info adicional",
+                                    "value": "info_adicional"
+                                },
+                                {
+                                    "grouping": "S",
+                                    "label": "Rechazar",
+                                    "value": "rechazar"
+                                },
+                                {
+                                    "grouping": "S",
+                                    "label": "Aprobar",
+                                    "value": "aprobar"
+                                }
+                            ],
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "readonly": "",
+                            "readonlyLabel": "",
+                            "size": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "value": "",
+                            "workflowVariable": "evaluacion_riesgos"
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.TextArea",
+                        "properties": {
+                            "cols": "20",
+                            "id": "info_adicional",
+                            "label": "<span style=\"color:red\">Info adicional a solicitar<\/span>",
+                            "placeholder": "",
+                            "readonly": "",
+                            "readonlyLabel": "",
+                            "rows": "5",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "value": "",
+                            "workflowVariable": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.CustomHTML",
+                        "properties": {
+                            "autoPopulate": "",
+                            "id": "field32",
+                            "label": "",
+                            "value": "<hr style=\"border-top: dotted 2px; />"
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.CheckBox",
+                        "properties": {
+                            "controlField": "marca_firma_docs",
+                            "id": "marca_validacion_prestamo",
+                            "label": "<span style=\"color:red\">Préstamo validado<\/span>",
+                            "options": [{
+                                "grouping": "S",
+                                "label": "S",
+                                "value": "S"
+                            }],
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "readonly": "",
+                            "readonlyLabel": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "value": "",
+                            "workflowVariable": "validacion_prestamo"
+                        }
+                    }
+                ],
+                "properties": {"width": "100%"}
+            }],
+            "properties": {
+                "comment": "",
+                "id": "section3",
+                "join": "",
+                "label": "Evaluación",
+                "loadBinder": {
+                    "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+                    "properties": {}
+                },
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "permissionReadonly": "",
+                "readonly": "",
+                "readonlyLabel": "",
+                "regex": "",
+                "reverse": "",
+                "storeBinder": {
+                    "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+                    "properties": {}
+                },
+                "visibilityControl": "info_recibida",
+                "visibilityValue": "S"
+            }
+        },
+        {
+            "className": "org.joget.apps.form.model.Section",
+            "elements": [{
+                "className": "org.joget.apps.form.model.Column",
+                "elements": [
+                    {
+                        "className": "org.joget.apps.form.lib.CheckBox",
+                        "properties": {
+                            "controlField": "",
+                            "id": "marca_verificacion_traspaso",
+                            "label": "<span style=\"color:blue\">Traspaso verificado<\/span>",
+                            "options": [{
+                                "grouping": "",
+                                "label": "S",
+                                "value": "S"
+                            }],
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "readonly": "",
+                            "readonlyLabel": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "value": "",
+                            "workflowVariable": "verificacion_traspaso"
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.CustomHTML",
+                        "properties": {
+                            "autoPopulate": "",
+                            "id": "field32",
+                            "label": "",
+                            "value": "<hr style=\"border-top: dotted 2px; />"
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.TextField",
+                        "properties": {
+                            "id": "cta_efectivo",
+                            "label": "<span style=\"color:blue\">IBAN Cuenta efectivo<\/span>",
+                            "maxlength": "",
+                            "placeholder": "IBAN con los 24 dígitos",
+                            "readonly": "",
+                            "readonlyLabel": "",
+                            "size": "",
+                            "storeNumeric": "",
+                            "style": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "value": "",
+                            "workflowVariable": "cta_efectivo"
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.SelectBox",
+                        "properties": {
+                            "controlField": "evaluacion_riesgos",
+                            "id": "categoria_plan",
+                            "label": "<span style=\"color:blue\">Categoría plan<\/span>",
+                            "multiple": "",
+                            "options": [
+                                {
+                                    "grouping": "",
+                                    "label": "",
+                                    "value": ""
+                                },
+                                {
+                                    "grouping": "aprobar",
+                                    "label": "Mercado Monetario Euro PP",
+                                    "value": "Mercado Monetario Euro PP"
+                                },
+                                {
+                                    "grouping": "aprobar",
+                                    "label": "Mixtos Euros Agresivos PP",
+                                    "value": "Mixtos Euros Agresivos PP"
+                                },
+                                {
+                                    "grouping": "aprobar",
+                                    "label": "Mixtos Euros Defensivos PP",
+                                    "value": "Mixtos Euros Defensivos PP"
+                                },
+                                {
+                                    "grouping": "aprobar",
+                                    "label": "Mixtos Euros Moderados PP",
+                                    "value": "Mixtos Euros Moderados PP"
+                                },
+                                {
+                                    "grouping": "aprobar",
+                                    "label": "RF Euro Corto Plazo PP",
+                                    "value": "RF Euro Corto Plazo PP"
+                                },
+                                {
+                                    "grouping": "aprobar",
+                                    "label": "RF Euro PP",
+                                    "value": "RF Euro PP"
+                                },
+                                {
+                                    "grouping": "aprobar",
+                                    "label": "RV España PP",
+                                    "value": "RV España PP"
+                                },
+                                {
+                                    "grouping": "aprobar",
+                                    "label": "RV Europa PP",
+                                    "value": "RV Europa PP"
+                                },
+                                {
+                                    "grouping": "aprobar",
+                                    "label": "RV Global PP",
+                                    "value": "RV Global PP"
+                                },
+                                {
+                                    "grouping": "aprobar",
+                                    "label": "RV USA PP",
+                                    "value": "RV USA PP"
+                                },
+                                {
+                                    "grouping": "aprobar",
+                                    "label": "RV Zona Euro PP",
+                                    "value": "RV Zona Euro PP"
+                                },
+                                {
+                                    "grouping": "aprobar",
+                                    "label": "Otro PP",
+                                    "value": "Otro PP"
+                                }
+                            ],
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "readonly": "",
+                            "readonlyLabel": "",
+                            "size": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "value": "",
+                            "workflowVariable": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.SelectBox",
+                        "properties": {
+                            "controlField": "categoria_plan",
+                            "id": "plan_seleccionado",
+                            "label": "<span style=\"color:blue\">Plan de pensiones<\/span>",
+                            "multiple": "",
+                            "options": [
+                                {
+                                    "grouping": "",
+                                    "label": "",
+                                    "value": ""
+                                },
+                                {
+                                    "grouping": "Mercado Monetario Euro PP",
+                                    "label": "BBVA Mercado Monetario PP",
+                                    "value": "BBVA Mercado Monetario PP"
+                                },
+                                {
+                                    "grouping": "Mercado Monetario Euro PP",
+                                    "label": "Caser Premier Renta Fija PP",
+                                    "value": "Caser Premier Renta Fija PP"
+                                },
+                                {
+                                    "grouping": "Mercado Monetario Euro PP",
+                                    "label": "Merchbanc PP",
+                                    "value": "Merchbanc PP"
+                                },
+                                {
+                                    "grouping": "Mercado Monetario Euro PP",
+                                    "label": "Santander Monetario PP",
+                                    "value": "Santander Monetario PP"
+                                },
+                                {
+                                    "grouping": "Mixtos Euros Agresivos PP",
+                                    "label": "BBVA Plan Multiactivo Decidido PP",
+                                    "value": "BBVA Plan Multiactivo Decidido PP"
+                                },
+                                {
+                                    "grouping": "Mixtos Euros Agresivos PP",
+                                    "label": "Mundiplan Dinámico PP",
+                                    "value": "Mundiplan Dinámico PP"
+                                },
+                                {
+                                    "grouping": "Mixtos Euros Agresivos PP",
+                                    "label": "NB Crecimiento PP",
+                                    "value": "NB Crecimiento PP"
+                                },
+                                {
+                                    "grouping": "Mixtos Euros Agresivos PP",
+                                    "label": "Plan Capitalización PP",
+                                    "value": "Plan Capitalización PP"
+                                },
+                                {
+                                    "grouping": "Mixtos Euros Agresivos PP",
+                                    "label": "PSN Individual PP",
+                                    "value": "PSN Individual PP"
+                                },
+                                {
+                                    "grouping": "Mixtos Euros Agresivos PP",
+                                    "label": "SECI Bolsa Activo PP",
+                                    "value": "SECI Bolsa Activo PP"
+                                },
+                                {
+                                    "grouping": "Mixtos Euros Defensivos PP",
+                                    "label": "Agrupación Previsión PP",
+                                    "value": "Agrupación Previsión PP"
+                                },
+                                {
+                                    "grouping": "Mixtos Euros Defensivos PP",
+                                    "label": "Caser Premier PP",
+                                    "value": "Caser Premier PP"
+                                },
+                                {
+                                    "grouping": "Mixtos Euros Defensivos PP",
+                                    "label": "Fonditel Red Básica PP",
+                                    "value": "Fonditel Red Básica PP"
+                                },
+                                {
+                                    "grouping": "Mixtos Euros Defensivos PP",
+                                    "label": "Fondomutua PP",
+                                    "value": "Fondomutua PP"
+                                },
+                                {
+                                    "grouping": "Mixtos Euros Defensivos PP",
+                                    "label": "March Pensión 80/20 PP",
+                                    "value": "March Pensión 80/20 PP"
+                                },
+                                {
+                                    "grouping": "Mixtos Euros Defensivos PP",
+                                    "label": "Renta 4 Dédalo PP",
+                                    "value": "Renta 4 Dédalo PP"
+                                },
+                                {
+                                    "grouping": "Mixtos Euros Defensivos PP",
+                                    "label": "Santalucía VP Mixto Prudente PP",
+                                    "value": "Santalucía VP Mixto Prudente PP"
+                                },
+                                {
+                                    "grouping": "Mixtos Euros Defensivos PP",
+                                    "label": "Santander Universidades RF Mixta PP",
+                                    "value": "Santander Universidades RF Mixta PP"
+                                },
+                                {
+                                    "grouping": "Mixtos Euros Defensivos PP",
+                                    "label": "SECI Selección Gestoras PP",
+                                    "value": "SECI Selección Gestoras PP"
+                                },
+                                {
+                                    "grouping": "Mixtos Euros Moderados PP",
+                                    "label": "Dunas Valor Flexible PP",
+                                    "value": "Dunas Valor Flexible PP"
+                                },
+                                {
+                                    "grouping": "Mixtos Euros Moderados PP",
+                                    "label": "Fonditel Red Activa PP",
+                                    "value": "Fonditel Red Activa PP"
+                                },
+                                {
+                                    "grouping": "Mixtos Euros Moderados PP",
+                                    "label": "Fondomutua Moderado PP",
+                                    "value": "Fondomutua Moderado PP"
+                                },
+                                {
+                                    "grouping": "Mixtos Euros Moderados PP",
+                                    "label": "Fondomutua Renta Variable Global PP",
+                                    "value": "Fondomutua Renta Variable Global PP"
+                                },
+                                {
+                                    "grouping": "Mixtos Euros Moderados PP",
+                                    "label": "Gesconsult Equilibrado Pensiones PP",
+                                    "value": "Gesconsult Equilibrado Pensiones PP"
+                                },
+                                {
+                                    "grouping": "Mixtos Euros Moderados PP",
+                                    "label": "Mapfre Jubilación Activa PP",
+                                    "value": "Mapfre Jubilación Activa PP"
+                                },
+                                {
+                                    "grouping": "Mixtos Euros Moderados PP",
+                                    "label": "March Pensión 50/50 PP",
+                                    "value": "March Pensión 50/50 PP"
+                                },
+                                {
+                                    "grouping": "Mixtos Euros Moderados PP",
+                                    "label": "Mundiplan Equilibrado PP",
+                                    "value": "Mundiplan Equilibrado PP"
+                                },
+                                {
+                                    "grouping": "Mixtos Euros Moderados PP",
+                                    "label": "Renta 4 Nexus PP",
+                                    "value": "Renta 4 Nexus PP"
+                                },
+                                {
+                                    "grouping": "Mixtos Euros Moderados PP",
+                                    "label": "Santalucía VP Gestión Decidido PP",
+                                    "value": "Santalucía VP Gestión Decidido PP"
+                                },
+                                {
+                                    "grouping": "Otro PP",
+                                    "label": "BBVA Telecomunicaciones PP",
+                                    "value": "BBVA Telecomunicaciones PP"
+                                },
+                                {
+                                    "grouping": "Otro PP",
+                                    "label": "Merchbanc Global PP",
+                                    "value": "Merchbanc Global PP"
+                                },
+                                {
+                                    "grouping": "RF Euro Corto Plazo PP",
+                                    "label": "NB Tranquilidad PP",
+                                    "value": "NB Tranquilidad PP"
+                                },
+                                {
+                                    "grouping": "RF Euro Corto Plazo PP",
+                                    "label": "Plan Evo Renta Fija CP PP",
+                                    "value": "Plan Evo Renta Fija CP PP"
+                                },
+                                {
+                                    "grouping": "RF Euro Corto Plazo PP",
+                                    "label": "Plan Pensión Creciente PP",
+                                    "value": "Plan Pensión Creciente PP"
+                                },
+                                {
+                                    "grouping": "RF Euro Corto Plazo PP",
+                                    "label": "Santalucía VP Retorno Absoluto PP",
+                                    "value": "Santalucía VP Retorno Absoluto PP"
+                                },
+                                {
+                                    "grouping": "RF Euro PP",
+                                    "label": "Agrupación Europensión PP",
+                                    "value": "Agrupación Europensión PP"
+                                },
+                                {
+                                    "grouping": "RF Euro PP",
+                                    "label": "Bankia Bonos PP",
+                                    "value": "Bankia Bonos PP"
+                                },
+                                {
+                                    "grouping": "RF Euro PP",
+                                    "label": "BBVA Renta Fija PP",
+                                    "value": "BBVA Renta Fija PP"
+                                },
+                                {
+                                    "grouping": "RF Euro PP",
+                                    "label": "Caser Renta Fija LP",
+                                    "value": "Caser Renta Fija LP"
+                                },
+                                {
+                                    "grouping": "RF Euro PP",
+                                    "label": "EDM Pensiones Uno PP",
+                                    "value": "EDM Pensiones Uno PP"
+                                },
+                                {
+                                    "grouping": "RF Euro PP",
+                                    "label": "Indexa Mas Rentabilidad Bonos PP",
+                                    "value": "Indexa Mas Rentabilidad Bonos PP"
+                                },
+                                {
+                                    "grouping": "RF Euro PP",
+                                    "label": "Merchbanc Renta Fija Flexible PP",
+                                    "value": "Merchbanc Renta Fija Flexible PP"
+                                },
+                                {
+                                    "grouping": "RF Euro PP",
+                                    "label": "NB Bonos PP",
+                                    "value": "NB Bonos PP"
+                                },
+                                {
+                                    "grouping": "RF Euro PP",
+                                    "label": "PSN Renta Fija Confianza PP",
+                                    "value": "PSN Renta Fija Confianza PP"
+                                },
+                                {
+                                    "grouping": "RF Euro PP",
+                                    "label": "Santalucía VP Renta Fija",
+                                    "value": "Santalucía VP Renta Fija"
+                                },
+                                {
+                                    "grouping": "RF Euro PP",
+                                    "label": "Santander Renta Fija PP",
+                                    "value": "Santander Renta Fija PP"
+                                },
+                                {
+                                    "grouping": "RF Euro PP",
+                                    "label": "360 Cora Renta Fija PP",
+                                    "value": "360 Cora Renta Fija PP"
+                                },
+                                {
+                                    "grouping": "RV España PP",
+                                    "label": "Bankia Bolsa Española PP",
+                                    "value": "Bankia Bolsa Española PP"
+                                },
+                                {
+                                    "grouping": "RV España PP",
+                                    "label": "BBVA Renta Variable Ibex PP",
+                                    "value": "BBVA Renta Variable Ibex PP"
+                                },
+                                {
+                                    "grouping": "RV España PP",
+                                    "label": "Mundiplan Audaz España PP",
+                                    "value": "Mundiplan Audaz España PP"
+                                },
+                                {
+                                    "grouping": "RV España PP",
+                                    "label": "MundiPlan Audaz Europa PP",
+                                    "value": "MundPlan Audaz Europa PP"
+                                },
+                                {
+                                    "grouping": "RV España PP",
+                                    "label": "Santalucía VP Espabolsa PP",
+                                    "value": "Santalucía VP Espabolsa PP"
+                                },
+                                {
+                                    "grouping": "RV Europa PP",
+                                    "label": "Bankia Bolsa Euro PP",
+                                    "value": "Bankia Bolsa Euro PP"
+                                },
+                                {
+                                    "grouping": "RV Europa PP",
+                                    "label": "Magallanes Acciones Europeas PP",
+                                    "value": "Magallanes Acciones Europeas PP"
+                                },
+                                {
+                                    "grouping": "RV Europa PP",
+                                    "label": "Santander Dividendo PP",
+                                    "value": "Santander Dividendo PP"
+                                },
+                                {
+                                    "grouping": "RV Global PP",
+                                    "label": "Indexa Mas Rentabilidad Acciones PP",
+                                    "value": "Indexa Mas Rentabilidad Acciones PP"
+                                },
+                                {
+                                    "grouping": "RV Global PP",
+                                    "label": "March Acciones PP",
+                                    "value": "March Acciones PP"
+                                },
+                                {
+                                    "grouping": "RV Global PP",
+                                    "label": "Metavalor Pensiones PP",
+                                    "value": "Metavalor Pensiones PP"
+                                },
+                                {
+                                    "grouping": "RV Global PP",
+                                    "label": "Mundiplan Audaz Global PP",
+                                    "value": "Mundiplan Audaz Global PP"
+                                },
+                                {
+                                    "grouping": "RV Global PP",
+                                    "label": "Renta 4 Global Acciones PP",
+                                    "value": "Renta 4 Global Acciones PP"
+                                },
+                                {
+                                    "grouping": "RV USA PP",
+                                    "label": "Santander Renta Variable USA PP",
+                                    "value": "Santander Renta Variable USA PP"
+                                },
+                                {
+                                    "grouping": "RV Zona Euro PP",
+                                    "label": "Renta 4 Acciones PP",
+                                    "value": "Renta 4 Acciones PP"
+                                },
+                                {
+                                    "grouping": "RV Zona Euro PP",
+                                    "label": "Santalucía VP Renta Variable Europa PP",
+                                    "value": "Santalucía VP Renta Variable Europa PP"
+                                },
+                                {
+                                    "grouping": "RV Global PP",
+                                    "label": "Santander Renta Variable Global PP",
+                                    "value": "Santander Renta Variable Global PP"
+                                }
+                            ],
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "readonly": "",
+                            "readonlyLabel": "",
+                            "size": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "value": "",
+                            "workflowVariable": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.CheckBox",
+                        "properties": {
+                            "controlField": "categoria_plan",
+                            "id": "marca_alta_fie",
+                            "label": "<span style=\"color:blue\">Alta en FIE<\/span>",
+                            "options": [
+                                {
+                                    "grouping": "Mercado Monetario Euro PP",
+                                    "label": "S",
+                                    "value": "S"
+                                },
+                                {
+                                    "grouping": "Mixtos Euros Agresivos PP",
+                                    "label": "S",
+                                    "value": "S"
+                                },
+                                {
+                                    "grouping": "Mixtos Euros Defensivos PP",
+                                    "label": "S",
+                                    "value": "S"
+                                },
+                                {
+                                    "grouping": "Mixtos Euros Moderados PP",
+                                    "label": "S",
+                                    "value": "S"
+                                },
+                                {
+                                    "grouping": "RF Euro Corto Plazo PP",
+                                    "label": "S",
+                                    "value": "S"
+                                },
+                                {
+                                    "grouping": "RF Euro PP",
+                                    "label": "S",
+                                    "value": "S"
+                                },
+                                {
+                                    "grouping": "RV España PP",
+                                    "label": "S",
+                                    "value": "S"
+                                },
+                                {
+                                    "grouping": "RV Europa PP",
+                                    "label": "S",
+                                    "value": "S"
+                                },
+                                {
+                                    "grouping": "RV Global PP",
+                                    "label": "S",
+                                    "value": "S"
+                                },
+                                {
+                                    "grouping": "RV USA PP",
+                                    "label": "S",
+                                    "value": "S"
+                                },
+                                {
+                                    "grouping": "RV Zona Euro PP",
+                                    "label": "S",
+                                    "value": "S"
+                                },
+                                {
+                                    "grouping": "Otro PP",
+                                    "label": "S",
+                                    "value": "S"
+                                }
+                            ],
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "readonly": "",
+                            "readonlyLabel": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "value": "",
+                            "workflowVariable": "alta_fie"
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.CustomHTML",
+                        "properties": {
+                            "autoPopulate": "",
+                            "id": "field32",
+                            "label": "",
+                            "value": "<hr style=\"border-top: dotted 2px; />"
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.CheckBox",
+                        "properties": {
+                            "controlField": "marca_alta_fie",
+                            "id": "marca_subida_docs",
+                            "label": "<span style=\"color:green\">Subida de documentos<\/span>",
+                            "options": [{
+                                "grouping": "S",
+                                "label": "S",
+                                "value": "S"
+                            }],
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "readonly": "",
+                            "readonlyLabel": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "value": "",
+                            "workflowVariable": "subida_docs"
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.CheckBox",
+                        "properties": {
+                            "controlField": "marca_subida_docs",
+                            "id": "marca_firma_docs",
+                            "label": "<span style=\"color:green\">Firma de documentos<\/span>",
+                            "options": [{
+                                "grouping": "S",
+                                "label": "S",
+                                "value": "S"
+                            }],
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "readonly": "",
+                            "readonlyLabel": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "value": "",
+                            "workflowVariable": "firma_docs"
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.CustomHTML",
+                        "properties": {
+                            "autoPopulate": "",
+                            "id": "field32",
+                            "label": "",
+                            "value": "<hr style=\"border-top: dotted 2px; />"
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.CheckBox",
+                        "properties": {
+                            "controlField": "marca_validacion_prestamo",
+                            "id": "marca_fichero_creado",
+                            "label": "<span style=\"color:green\">Cargado en fichero<\/span>",
+                            "options": [{
+                                "grouping": "S",
+                                "label": "S",
+                                "value": "S"
+                            }],
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "readonly": "",
+                            "readonlyLabel": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "value": "",
+                            "workflowVariable": "fichero_creado"
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.CheckBox",
+                        "properties": {
+                            "controlField": "marca_fichero_creado",
+                            "id": "marca_alta_aportacion",
+                            "label": "<span style=\"color:green\">Aportación realizada<\/span>",
+                            "options": [{
+                                "grouping": "S",
+                                "label": "S",
+                                "value": "S"
+                            }],
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "readonly": "",
+                            "readonlyLabel": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "value": "",
+                            "workflowVariable": "alta_aportacion"
+                        }
+                    }
+                ],
+                "properties": {"width": "100%"}
+            }],
+            "properties": {
+                "comment": "",
+                "id": "section4",
+                "join": "",
+                "label": "Confirmación",
+                "loadBinder": {
+                    "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+                    "properties": {}
+                },
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "permissionReadonly": "",
+                "readonly": "",
+                "readonlyLabel": "",
+                "regex": "",
+                "reverse": "",
+                "storeBinder": {
+                    "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+                    "properties": {}
+                },
+                "visibilityControl": "evaluacion_riesgos",
+                "visibilityValue": "aprobar"
+            }
+        }
+    ],
+    "properties": {
+        "description": "",
+        "id": "form_plan",
+        "loadBinder": {"className": "org.joget.apps.form.lib.WorkflowFormBinder"},
+        "name": "Formulario Planes de Pensiones",
+        "storeBinder": {"className": "org.joget.apps.form.lib.WorkflowFormBinder"},
+        "tableName": "expediente_plan"
+    }
+}
