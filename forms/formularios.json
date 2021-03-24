@@ -1,0 +1,53 @@
+{
+    "className": "org.joget.apps.form.model.Form",
+    "elements": [{
+        "className": "org.joget.apps.form.model.Section",
+        "elements": [{
+            "className": "org.joget.apps.form.model.Column",
+            "elements": [
+                {
+                    "className": "org.joget.apps.form.lib.TextField",
+                    "properties": {
+                        "id": "tags",
+                        "label": "Field1",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "readonly": "",
+                        "readonlyLabel": "",
+                        "size": "",
+                        "storeNumeric": "",
+                        "style": "",
+                        "validator": {
+                            "className": "",
+                            "properties": {}
+                        },
+                        "value": "",
+                        "workflowVariable": ""
+                    }
+                },
+                {
+                    "className": "org.joget.apps.form.lib.CustomHTML",
+                    "properties": {
+                        "autoPopulate": "",
+                        "id": "field2",
+                        "label": "",
+                        "value": "  <script>\r\n  $( function() {\r\n    var availableTags = [\r\n      \"ActionScript\",\r\n      \"AppleScript\",\r\n      \"Asp\",\r\n      \"BASIC\"\r\n    ];\r\n    $username=\"your_username\";\r\n    $password=\"your_password\";\r\n    $database=\"your_database\";\r\n    $mysqli = new mysqli(\"localhost\", $username, $password, $database);\r\n    $( \"#tags\" ).autocomplete({\r\n      source: function( request, response ) {\r\n           $.ajax({\r\n                url: url,\r\n                data: data,\r\n                success: success,\r\n                dataType: 'POST'\r\n           })\r\n      }\r\n    });\r\n  } );\r\n  <\/script>"
+                    }
+                }
+            ],
+            "properties": {"width": "100%"}
+        }],
+        "properties": {
+            "id": "section1",
+            "label": "Section"
+        }
+    }],
+    "properties": {
+        "description": "",
+        "id": "formularios",
+        "loadBinder": {"className": "org.joget.apps.form.lib.WorkflowFormBinder"},
+        "name": "Prueba de formularios",
+        "storeBinder": {"className": "org.joget.apps.form.lib.WorkflowFormBinder"},
+        "tableName": "pruebas2021"
+    }
+}
